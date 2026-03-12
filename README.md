@@ -1,2 +1,9 @@
-# portfolio-website
-Personal portfolio website showcasing my projects and growth as an aspiring data analyst with an interest in data engineering.
+# Portfolio Website
+
+This repository contains my personal portfolio website.
+
+The site highlights my skills, projects, and learning journey as an aspiring analytics engineer with interests in data analytics, data engineering, and modern data systems.
+
+## Live Website
+Visit the site here:  
+https://huntersarkis.github.io/portfolio-website/
