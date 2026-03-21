@@ -8,6 +8,11 @@ body {
     line-height: 1.7;
 }
 
+.featured {
+    border: 2px solid #2563eb;
+    background-color: #eff6ff;
+}
+
 header {
     text-align: center;
     margin-bottom: 40px;
