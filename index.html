@@ -3,127 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hunter Sarkis Portfolio</title>
+<title>Hunter Sarkis | Analytics Engineer</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
 <header>
-
-<h1>Hunter Sarkis</h1>
-
-<p>Analytics & Data Engineering | SQL • Python • Azure</p>
-
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
-
+  <div class="header-inner">
+    <div class="header-label">Portfolio</div>
+    <h1>Hunter Sarkis</h1>
+    <p class="tagline">Analytics Engineer &mdash; dbt &bull; BigQuery &bull; SQL &bull; Python</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-
 <section id="about">
-
-<h2>About Me</h2>
-
-<p>
-I focus on building analytics and data engineering projects that transform raw data into meaningful insights. 
-I enjoy working with SQL, Python, and Azure to explore datasets, build pipelines, and support data-driven decision making.
-</p>
-
+  <h2>About Me</h2>
+  <p>
+    I build data infrastructure that turns raw, messy data into clean, trusted models that teams can actually use.
+    My focus is analytics engineering — designing dbt transformation pipelines, modeling staging and mart layers in BigQuery,
+    and bridging the gap between data engineering and business intelligence.
+  </p>
+  <p>
+    Currently completing my M.S. in Business Analytics at Grand Canyon University (4.0 GPA) while building
+    portfolio projects on a modern cloud stack. I hold the <strong>Microsoft Azure DP-900</strong> certification
+    and am actively targeting Analytics Engineer roles.
+  </p>
 </section>
-
 
 <section id="skills">
-
-<h2>Skills</h2>
-
-<ul>
-<li>SQL</li>
-<li>Python</li>
-<li>Azure</li>
-<li>Power BI</li>
-<li>Data Analysis</li>
-<li>Data Engineering</li>
-</ul>
-
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h4>Core</h4>
+      <ul>
+        <li>SQL</li>
+        <li>Python</li>
+        <li>dbt</li>
+        <li>BigQuery</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Cloud & Infra</h4>
+      <ul>
+        <li>Azure (DP-900)</li>
+        <li>dbt Cloud</li>
+        <li>Git / GitHub</li>
+        <li>SQLite</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Analytics & BI</h4>
+      <ul>
+        <li>Power BI</li>
+        <li>Tableau</li>
+        <li>Excel</li>
+        <li>Data Modeling</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Other</h4>
+      <ul>
+        <li>pandas</li>
+        <li>scikit-learn</li>
+        <li>R / tidyverse</li>
+        <li>KNIME</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-
 <section id="projects">
+  <h2>Projects</h2>
 
-<section id="projects">
+  <div class="project-card featured">
+    <div class="project-meta">
+      <span class="badge">Featured</span>
+      <span class="tech-tag">dbt</span>
+      <span class="tech-tag">BigQuery</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">SQL</span>
+    </div>
+    <h3>Fintech Analytics Pipeline</h3>
+    <p>
+      End-to-end analytics engineering project simulating a fintech app's data infrastructure.
+      Python-generated datasets are loaded via dbt seed into BigQuery, then transformed through
+      a three-layer pipeline — raw → staging → mart. Mart models include
+      <code>dim_users</code>, <code>fct_transactions</code>, and <code>fct_monthly_spending</code>,
+      with a <code>schema.yml</code> defining tests and column-level documentation.
+    </p>
+    <a href="https://github.com/huntersarkis/fintech-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
+  </div>
 
-<h2>Projects</h2>
+  <div class="project-card featured">
+    <div class="project-meta">
+      <span class="badge">Featured</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">SQLite</span>
+      <span class="tech-tag">SQL</span>
+      <span class="tech-tag">Power BI</span>
+    </div>
+    <h3>Fraud Risk Analytics Pipeline</h3>
+    <p>
+      Analytics pipeline built with Python, SQLite, and SQL to analyze transaction data and identify
+      potential fraud patterns. Implements a multi-layer data modeling approach with transformation
+      workflows designed to support analytical queries and a four-page Power BI dashboard.
+    </p>
+    <a href="https://github.com/huntersarkis/fraud-risk-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
+  </div>
 
-<div class="project-card featured">
-  <h3>Featured Project: Fraud Risk Analytics Pipeline</h3>
-  <p><strong>Tech:</strong> SQL, Python, SQLite</p>
-  <p>
-    Built an analytics pipeline using Python, SQLite, and SQL to analyze transaction data and identify potential fraud patterns. Implemented data modeling and transformation workflows to support analytical queries.
-  </p>
-  <p>
-    <a href="https://github.com/huntersarkis/fraud-risk-analytics-pipeline" target="_blank">View on GitHub</a>
-  </p>
-</div>
+  <div class="project-card">
+    <div class="project-meta">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Excel</span>
+      <span class="tech-tag">Tableau</span>
+    </div>
+    <h3>Hotel Booking Cancellation Analysis</h3>
+    <p>
+      Analyzed hotel booking data to identify cancellation trends and key drivers.
+      Created visualizations and insights in Tableau to support predictive modeling and business decisions.
+    </p>
+    <a href="https://github.com/huntersarkis/hotel-booking-cancellation" target="_blank">View on GitHub &rarr;</a>
+  </div>
 
-
-<div class="project-card">
-  <h3>Hotel Booking Cancellation Analysis</h3>
-  <p><strong>Tech:</strong> Python, Excel, Tableau</p>
-  <p>
-    Analyzed hotel booking data using Python, Excel, and Tableau to identify cancellation trends and key drivers. Created visualizations and insights to support predictive modeling and business decisions.
-  </p>
-  <p>
-    <a href="https://github.com/huntersarkis/hotel-booking-cancellation" target="_blank">View on GitHub</a>
-  </p>
-</div>
-
-
-<div class="project-card">
-  <h3>Social Media Engagement Analysis</h3>
-  <p><strong>Tech:</strong> Python, SQL</p>
-  <p>
-    Explored social media engagement data using Python, pandas, and SQL to uncover trends in performance. Built visualizations to highlight key metrics and support data-driven marketing insights.
-  </p>
-  <p>
-    <a href="https://github.com/huntersarkis/social-media-engagement-analysis" target="_blank">View on GitHub</a>
-  </p>
-</div>
+  <div class="project-card">
+    <div class="project-meta">
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">SQL</span>
+    </div>
+    <h3>Social Media Engagement Analysis</h3>
+    <p>
+      Explored social media engagement data using Python, pandas, and SQL to uncover trends in performance.
+      Built visualizations to highlight key metrics and support data-driven marketing insights.
+    </p>
+    <a href="https://github.com/huntersarkis/social-media-engagement-analysis" target="_blank">View on GitHub &rarr;</a>
+  </div>
 
 </section>
-
 
 <section id="contact">
-
-<h2>Contact</h2>
-
-<p>
-GitHub:
-<a href="https://github.com/huntersarkis" target="_blank">
-github.com/huntersarkis
-</a>
-</p>
-
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/hunter-sarkis" target="_blank">
-linkedin.com/in/hunter-sarkis
-</a>
-</p>
-
+  <h2>Contact</h2>
+  <div class="contact-links">
+    <a href="https://github.com/huntersarkis" target="_blank">
+      <span class="contact-label">GitHub</span>
+      <span class="contact-value">github.com/huntersarkis</span>
+    </a>
+    <a href="https://www.linkedin.com/in/hunter-sarkis" target="_blank">
+      <span class="contact-label">LinkedIn</span>
+      <span class="contact-value">linkedin.com/in/hunter-sarkis</span>
+    </a>
+  </div>
 </section>
 
-
 <footer>
-
-<p>Last updated: March 2026</p>
-
+  <p>Hunter Sarkis &bull; Last updated: March 2026</p>
 </footer>
-
 
 </body>
 </html>
