@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hunter Sarkis | Analytics Engineer</title>
+<title>Hunter Sarkis | Data Analyst</title>
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
   <div class="header-inner">
     <div class="header-label">Portfolio</div>
     <h1>Hunter Sarkis</h1>
-    <p class="tagline">Analytics Engineer &mdash; dbt &bull; BigQuery &bull; SQL &bull; Python</p>
+    <p class="tagline">Data Analyst &mdash; SQL &bull; Python &bull; dbt &bull; BigQuery</p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -27,14 +27,16 @@
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I build data infrastructure that turns raw, messy data into clean, trusted models that teams can actually use.
-    My focus is analytics engineering — designing dbt transformation pipelines, modeling staging and mart layers in BigQuery,
-    and bridging the gap between data engineering and business intelligence.
+    Data analyst with an eye toward analytics engineering — I turn raw, messy data into actionable insights
+    that drive business decisions. My work spans the full analytics workflow: cleaning and modeling data,
+    building dashboards, running statistical analysis, and translating findings into clear recommendations
+    for stakeholders.
   </p>
   <p>
     Currently completing my M.S. in Business Analytics at Grand Canyon University (4.0 GPA) while building
-    portfolio projects on a modern cloud stack. I hold the <strong>Microsoft Azure DP-900</strong> certification
-    and am actively targeting Analytics Engineer roles.
+    production-style portfolio projects using dbt Cloud, BigQuery, Python, and SQL. I hold the
+    <strong>Microsoft Azure DP-900</strong> certification and am actively targeting Data Analyst roles,
+    with a long-term interest in analytics engineering and the modeling side of the stack.
   </p>
 </section>
 
@@ -42,30 +44,39 @@
   <h2>Skills</h2>
   <div class="skills-grid">
     <div class="skill-group">
-      <h4>Core</h4>
+      <h4>Technical</h4>
       <ul>
         <li>SQL</li>
         <li>Python</li>
-        <li>dbt</li>
-        <li>BigQuery</li>
+        <li>pandas</li>
+        <li>scikit-learn</li>
       </ul>
     </div>
     <div class="skill-group">
-      <h4>Cloud & Infra</h4>
+      <h4>Data Engineering</h4>
       <ul>
-        <li>Azure (DP-900)</li>
         <li>dbt Cloud</li>
+        <li>BigQuery</li>
+        <li>ETL Pipelines</li>
         <li>Git / GitHub</li>
-        <li>SQLite</li>
       </ul>
     </div>
     <div class="skill-group">
-      <h4>Analytics & BI</h4>
+      <h4>Analytics</h4>
+      <ul>
+        <li>Predictive Modeling</li>
+        <li>Statistical Analysis</li>
+        <li>Data Storytelling</li>
+        <li>Dashboard Development</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>BI & Tools</h4>
       <ul>
         <li>Power BI</li>
         <li>Tableau</li>
         <li>Excel</li>
-        <li>Data Modeling</li>
+        <li>Salesforce</li>
       </ul>
     </div>
   </div>
@@ -77,6 +88,25 @@
   <div class="project-card featured">
     <div class="project-meta">
       <span class="badge">Featured</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">pandas</span>
+      <span class="tech-tag">scikit-learn</span>
+      <span class="tech-tag">Monte Carlo</span>
+    </div>
+    <h3>E-Commerce Review Prediction</h3>
+    <p>
+      Applied the CRISP-DM framework to 95,000+ e-commerce orders to predict customer dissatisfaction
+      based on delivery performance. Engineered delivery features, ran t-tests and chi-square analysis,
+      and selected a Decision Tree classifier achieving 82.6% accuracy. Built a Monte Carlo simulation
+      across 10,000 orders showing that eliminating late deliveries drives more satisfaction than
+      reducing average delivery time — with prescriptive recommendations for fulfillment strategy.
+    </p>
+    <a href="https://github.com/huntersarkis/ecommerce-review-prediction" target="_blank">View on GitHub &rarr;</a>
+  </div>
+
+  <div class="project-card featured">
+    <div class="project-meta">
+      <span class="badge">Featured</span>
       <span class="tech-tag">dbt</span>
       <span class="tech-tag">BigQuery</span>
       <span class="tech-tag">Python</span>
@@ -84,18 +114,17 @@
     </div>
     <h3>Fintech Analytics Pipeline</h3>
     <p>
-      End-to-end analytics engineering project simulating a fintech app's data infrastructure.
-      Python-generated datasets are loaded via dbt seed into BigQuery, then transformed through
-      a three-layer pipeline — raw → staging → mart. Mart models include
-      <code>dim_users</code>, <code>fct_transactions</code>, and <code>fct_monthly_spending</code>,
-      with a <code>schema.yml</code> defining tests and column-level documentation.
+      Production-style analytics pipeline using Python, SQL, and dbt Cloud — transforming raw data
+      through staging and mart layers into fact and dimension tables in BigQuery, tested and documented
+      via <code>schema.yml</code>. Engineered a customer risk model using SQL CASE logic to segment
+      500 users by credit score and overdraft behavior, identifying 21 high-risk accounts averaging
+      a 612 credit score and 2.29 overdrafts.
     </p>
     <a href="https://github.com/huntersarkis/fintech-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
   </div>
 
-  <div class="project-card featured">
+  <div class="project-card">
     <div class="project-meta">
-      <span class="badge">Featured</span>
       <span class="tech-tag">Python</span>
       <span class="tech-tag">SQL</span>
       <span class="tech-tag">SQLite</span>
@@ -124,20 +153,6 @@
       workflows designed to support analytical queries and a four-page Power BI dashboard.
     </p>
     <a href="https://github.com/huntersarkis/fraud-risk-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
-  </div>
-
-  <div class="project-card">
-    <div class="project-meta">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Excel</span>
-      <span class="tech-tag">Tableau</span>
-    </div>
-    <h3>Hotel Booking Cancellation Analysis</h3>
-    <p>
-      Analyzed hotel booking data to identify cancellation trends and key drivers.
-      Created visualizations and insights in Tableau to support predictive modeling and business decisions.
-    </p>
-    <a href="https://github.com/huntersarkis/hotel-booking-cancellation" target="_blank">View on GitHub &rarr;</a>
   </div>
 
   <div class="project-card">
@@ -178,7 +193,7 @@
 </section>
 
 <footer>
-  <p>Hunter Sarkis &bull; Last updated: March 2026</p>
+  <p>Hunter Sarkis &bull; Last updated: May 2026</p>
 </footer>
 
 </body>
