@@ -109,16 +109,19 @@
       <span class="badge">Featured</span>
       <span class="tech-tag">dbt</span>
       <span class="tech-tag">BigQuery</span>
-      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Power BI</span>
       <span class="tech-tag">SQL</span>
     </div>
     <h3>Fintech Analytics Pipeline</h3>
     <p>
-      Production-style analytics pipeline using Python, SQL, and dbt Cloud — transforming raw data
-      through staging and mart layers into fact and dimension tables in BigQuery, tested and documented
-      via <code>schema.yml</code>. Engineered a customer risk model using SQL CASE logic to segment
-      500 users by credit score and overdraft behavior, identifying 21 high-risk accounts averaging
-      a 612 credit score and 2.29 overdrafts.
+      Production-style analytics pipeline using Python, SQL, and dbt Cloud, transforming raw data through
+      staging and mart layers into fact and dimension tables in BigQuery, tested and documented via
+      <code>schema.yml</code>. Rebuilt the Power BI layer after diagnosing two data model issues, an
+      unfiltered spend measure and a collapsed date grain, that were inflating and distorting key metrics.
+      Engineered a customer risk model using SQL CASE logic to segment 500 users by credit score and
+      overdraft behavior, surfacing a counterintuitive finding: high-risk users hold the highest average
+      account balances, but also average 2.29 overdrafts, pointing to overdraft history rather than
+      balance as the likely driver of risk.
     </p>
     <a href="https://github.com/huntersarkis/fintech-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
   </div>
@@ -193,7 +196,7 @@
 </section>
 
 <footer>
-  <p>Hunter Sarkis &bull; Last updated: May 2026</p>
+  <p>Hunter Sarkis &bull; Last updated: July 2026</p>
 </footer>
 
 </body>
