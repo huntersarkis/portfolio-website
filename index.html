@@ -6,199 +6,223 @@
 <title>Hunter Sarkis | Data Analyst</title>
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="header-label">Portfolio</div>
+<div class="pipe">
+
+  <header class="stage" id="top">
+    <p class="stage-label">source</p>
     <h1>Hunter Sarkis</h1>
-    <p class="tagline">Data Analyst &mdash; SQL &bull; Python &bull; dbt &bull; BigQuery</p>
+    <p class="role">Data analyst, moving toward analytics engineering</p>
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Data analyst with an eye toward analytics engineering — I turn raw, messy data into actionable insights
-    that drive business decisions. My work spans the full analytics workflow: cleaning and modeling data,
-    building dashboards, running statistical analysis, and translating findings into clear recommendations
-    for stakeholders.
-  </p>
-  <p>
-    I recently completed my M.S. in Business Analytics at Grand Canyon University (4.0 GPA), while building
-    production-style portfolio projects using dbt Cloud, BigQuery, Python, and SQL. I hold the
-    <strong>Microsoft Azure DP-900</strong> certification and am actively targeting Data Analyst roles,
-    with a long-term interest in analytics engineering and the modeling side of the stack.
-  </p>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-group">
-      <h4>Technical</h4>
-      <ul>
-        <li>SQL</li>
-        <li>Python</li>
-        <li>pandas</li>
-        <li>scikit-learn</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h4>Data Engineering</h4>
-      <ul>
-        <li>dbt Cloud</li>
-        <li>BigQuery</li>
-        <li>ETL Pipelines</li>
-        <li>Git / GitHub</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h4>Analytics</h4>
-      <ul>
-        <li>Predictive Modeling</li>
-        <li>Statistical Analysis</li>
-        <li>Data Storytelling</li>
-        <li>Dashboard Development</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h4>BI & Tools</h4>
-      <ul>
-        <li>Power BI</li>
-        <li>Tableau</li>
-        <li>Excel</li>
-        <li>Salesforce</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-
-  <div class="project-card featured">
-    <div class="project-meta">
-      <span class="badge">Featured</span>
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">pandas</span>
-      <span class="tech-tag">scikit-learn</span>
-      <span class="tech-tag">Monte Carlo</span>
-    </div>
-    <h3>E-Commerce Review Prediction</h3>
+  <section class="stage" id="about">
+    <p class="stage-label">about</p>
+    <h2>What I do</h2>
     <p>
-      Applied the CRISP-DM framework to 95,000+ e-commerce orders to predict customer dissatisfaction
-      based on delivery performance. Engineered delivery features, ran t-tests and chi-square analysis,
-      and selected a Decision Tree classifier achieving 82.6% accuracy. Built a Monte Carlo simulation
-      across 10,000 orders showing that eliminating late deliveries drives more satisfaction than
-      reducing average delivery time — with prescriptive recommendations for fulfillment strategy.
+      I like the whole arc of a data project: taking messy, unreliable data, cleaning it up,
+      figuring out what's actually going on, and explaining it clearly.
     </p>
-    <a href="https://github.com/huntersarkis/ecommerce-review-prediction" target="_blank">View on GitHub &rarr;</a>
-  </div>
-
-  <div class="project-card featured">
-    <div class="project-meta">
-      <span class="badge">Featured</span>
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">SQL</span>
-      <span class="tech-tag">dbt</span>
-      <span class="tech-tag">BigQuery</span>
-      <span class="tech-tag">Power BI</span>
-    </div>
-    <h3>Fintech Analytics Pipeline</h3>
     <p>
-      Production-style analytics pipeline using Python, SQL, and dbt Cloud, transforming raw data through
-      staging and mart layers into fact and dimension tables in BigQuery, tested and documented via
-      <code>schema.yml</code>. Rebuilt the Power BI layer after diagnosing two data model issues, an
-      unfiltered spend measure and a collapsed date grain, that were inflating and distorting key metrics.
-      Engineered a customer risk model using SQL CASE logic to segment 500 users by credit score and
-      overdraft behavior, surfacing a counterintuitive finding: high-risk users hold the highest average
-      account balances, but also average 2.29 overdrafts, pointing to overdraft history rather than
-      balance as the likely driver of risk.
+      Right now I'm a Customer Operations Analyst at Inland Management, where I keep 10,000+
+      Salesforce lead records clean and reliable, and turn operational trends into narratives
+      that senior leadership actually uses to make decisions. Before that, at Spirit Electronics,
+      I built Power BI dashboards that saved the team 5 to 8 hours of manual reporting a week and
+      helped shape a content strategy that lifted engagement by 15%.
     </p>
-    <a href="https://github.com/huntersarkis/fintech-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
-  </div>
-
-  <div class="project-card">
-    <div class="project-meta">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">SQL</span>
-      <span class="tech-tag">SQLite</span>
-      <span class="tech-tag">ETL</span>
-    </div>
-    <h3>SaaS Product Analytics Pipeline</h3>
     <p>
-      End-to-end analytics engineering project transforming raw user, event, and subscription data
-      into analytics-ready models. Built with Python and SQLite across a structured pipeline — raw
-      ingestion through SQL modeling — to support tracking of user activity, revenue, and retention metrics.
+      I have my M.S. in Business Analytics from Grand Canyon University with a 4.0 GPA, and I
+      used that program to go deeper technically. My capstone segmented 93,000+ guest transactions
+      using K-Means clustering and built a Random Forest model to predict spend.
     </p>
-    <a href="https://github.com/huntersarkis/saas-product-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
-  </div>
-
-  <div class="project-card">
-    <div class="project-meta">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">SQLite</span>
-      <span class="tech-tag">SQL</span>
-      <span class="tech-tag">Power BI</span>
-    </div>
-    <h3>Fraud Risk Analytics Pipeline</h3>
     <p>
-      Analytics pipeline built with Python, SQLite, and SQL to analyze transaction data and identify
-      potential fraud patterns. Implements a multi-layer data modeling approach with transformation
-      workflows designed to support analytical queries and a four-page Power BI dashboard.
+      On my own time, I keep building full cloud pipelines end to end. One project pulls stock
+      data through Python into Azure SQL, transforms it with layered SQL, and surfaces it in a
+      Power BI dashboard with custom DAX measures, including tracking down a filter context bug
+      that was quietly returning the wrong answer under certain slicer selections. Another moves
+      raw data through dbt Cloud into BigQuery fact and dimension tables, where I caught two real
+      data integrity issues before they reached the dashboard.
     </p>
-    <a href="https://github.com/huntersarkis/fraud-risk-analytics-pipeline" target="_blank">View on GitHub &rarr;</a>
-  </div>
-
-  <div class="project-card">
-    <div class="project-meta">
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">SQL</span>
-    </div>
-    <h3>Social Media Engagement Analysis</h3>
     <p>
-      Explored social media engagement data using Python, pandas, and SQL to uncover trends in performance.
-      Built visualizations to highlight key metrics and support data-driven marketing insights.
+      I love the whole process, top to bottom. Cleaning the data, building the pipeline, modeling
+      it, visualizing it, and explaining what it means. Looking for data analyst roles where I
+      get to keep working that whole chain, from raw data to a decision someone actually makes.
     </p>
-    <a href="https://github.com/huntersarkis/social-media-engagement-analysis" target="_blank">View on GitHub &rarr;</a>
-  </div>
+  </section>
 
-</section>
+  <section class="stage" id="skills">
+    <p class="stage-label">transform</p>
+    <h2>What I work with</h2>
+    <p class="section-intro">Grouped by where each tool sits in a pipeline, not by category label.</p>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="contact-links">
-    <a href="https://github.com/huntersarkis" target="_blank">
-      <span class="contact-label">GitHub</span>
-      <span class="contact-value">github.com/huntersarkis</span>
-    </a>
-    <a href="https://www.linkedin.com/in/hunter-sarkis" target="_blank">
-      <span class="contact-label">LinkedIn</span>
-      <span class="contact-value">linkedin.com/in/hunter-sarkis</span>
-    </a>
-    <a href="mailto:hunterjsarkis@gmail.com">
-      <span class="contact-label">Email</span>
-      <span class="contact-value">hunterjsarkis@gmail.com</span>
-    </a>
-    <a href="resume.pdf" target="_blank" download>
-      <span class="contact-label">Resume</span>
-      <span class="contact-value">Download PDF &rarr;</span>
-    </a>
-  </div>
-</section>
+    <div class="skill-rows">
+      <div class="skill-row">
+        <h3>Ingest &amp; query</h3>
+        <ul class="tags">
+          <li>SQL</li>
+          <li>Python</li>
+          <li>pandas</li>
+        </ul>
+      </div>
+      <div class="skill-row">
+        <h3>Store &amp; transform</h3>
+        <ul class="tags">
+          <li>Azure SQL Database</li>
+          <li>dbt Cloud</li>
+          <li>BigQuery</li>
+          <li>SQLite</li>
+        </ul>
+      </div>
+      <div class="skill-row">
+        <h3>Model</h3>
+        <ul class="tags">
+          <li>scikit-learn</li>
+          <li>K-Means Clustering</li>
+          <li>Random Forest</li>
+        </ul>
+      </div>
+      <div class="skill-row">
+        <h3>Visualize</h3>
+        <ul class="tags">
+          <li>Power BI</li>
+          <li>DAX</li>
+          <li>Tableau</li>
+          <li>Excel</li>
+        </ul>
+      </div>
+      <div class="skill-row">
+        <h3>Operate</h3>
+        <ul class="tags">
+          <li>Salesforce Lightning</li>
+          <li>Git</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>Hunter Sarkis &bull; Last updated: July 2026</p>
-</footer>
+  <section class="stage" id="projects">
+    <p class="stage-label">load</p>
+    <h2>Projects</h2>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Guest Segmentation Capstone</h3>
+        <ul class="tags small">
+          <li>Python</li>
+          <li>scikit-learn</li>
+          <li>K-Means</li>
+          <li>Random Forest</li>
+        </ul>
+      </div>
+      <p>
+        Applied the CRISP-DM framework to 93,000+ guest transaction records to segment a retail
+        guest base by purchasing behavior, enabling personalized marketing over broad,
+        one-size-fits-all campaigns. Engineered 7 behavioral features and applied K-Means
+        clustering to identify two guest segments, validating results through holdout testing,
+        5-fold cross-validation, and bootstrap resampling.
+      </p>
+      <p>
+        Found that loyal guests, just 3% of the base, spent nearly 2x more on average
+        (p &lt; .001). Built a tuned Random Forest model (60.1% R&sup2; on holdout) to predict
+        guest-level spend, and designed a full deployment plan with batch scoring architecture,
+        a governance framework, and a cost-benefit case projecting positive ROI within year one.
+      </p>
+      <a href="https://github.com/huntersarkis/gcu-capstone-project" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Market Volatility Pipeline</h3>
+        <ul class="tags small">
+          <li>Python</li>
+          <li>Azure SQL</li>
+          <li>SQL</li>
+          <li>Power BI</li>
+          <li>DAX</li>
+        </ul>
+      </div>
+      <p>
+        End to end cloud pipeline analyzing stock price volatility across five sectors. Python
+        pulls daily price data for 15 stocks and loads it into Azure SQL Database, then layered
+        SQL views calculate daily returns and 30-day rolling volatility using window functions.
+        Power BI connects directly to Azure SQL, using custom DAX measures for year-to-date
+        return and sector-level comparison.
+      </p>
+      <p>
+        Diagnosed and fixed a filter context bug where headline KPI measures were recalculating
+        based on ticker-level slicer selections instead of staying locked to the full market
+        view, resolved with CALCULATE and REMOVEFILTERS. Also traced a data quality issue back
+        through the mart and staging layers to a bad API response, confirming the pipeline logic
+        itself was sound.
+      </p>
+      <a href="https://github.com/huntersarkis/market-volatility-pipeline" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Fintech Analytics Pipeline</h3>
+        <ul class="tags small">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>dbt Cloud</li>
+          <li>BigQuery</li>
+          <li>Power BI</li>
+        </ul>
+      </div>
+      <p>
+        Production-style analytics pipeline using Python, SQL, and dbt Cloud, transforming raw
+        data through staging and mart layers into fact and dimension tables in BigQuery, tested
+        and documented via <code>schema.yml</code>. Rebuilt the Power BI layer after diagnosing
+        two data model issues, an unfiltered spend measure and a collapsed date grain, that were
+        inflating and distorting key metrics.
+      </p>
+      <p>
+        Engineered a customer risk model using SQL to segment 500 users by credit score and
+        overdraft behavior, surfacing a counterintuitive finding: high-risk users hold the
+        highest average account balances, but also average 2.29 overdrafts, pointing to overdraft
+        history rather than balance as the likely driver of risk.
+      </p>
+      <a href="https://github.com/huntersarkis/fintech-analytics-pipeline" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+  </section>
+
+  <section class="stage" id="contact">
+    <p class="stage-label">sink</p>
+    <h2>Get in touch</h2>
+    <div class="contact-grid">
+      <a href="https://github.com/huntersarkis" target="_blank" rel="noopener">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">github.com/huntersarkis</span>
+      </a>
+      <a href="https://www.linkedin.com/in/hunter-sarkis" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">linkedin.com/in/hunter-sarkis</span>
+      </a>
+      <a href="mailto:hunterjsarkis@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">hunterjsarkis@gmail.com</span>
+      </a>
+      <a href="resume.pdf" target="_blank" download>
+        <span class="contact-label">Resume</span>
+        <span class="contact-value">Download PDF</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Hunter Sarkis. Last updated August 2026.</p>
+  </footer>
+
+</div>
 
 </body>
 </html>
