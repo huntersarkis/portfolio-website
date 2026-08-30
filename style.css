@@ -1,279 +1,236 @@
 /* ── Tokens ── */
 :root {
-  --blue: #2563eb;
-  --blue-light: #eff6ff;
-  --blue-mid: #bfdbfe;
-  --slate-dark: #1e293b;
-  --slate-mid: #475569;
-  --slate-light: #64748b;
-  --border: #cbd5e1;
-  --bg: #f8fafc;
-  --white: #ffffff;
-  --radius: 10px;
-  --font-body: 'DM Sans', Arial, sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --paper: #f1f4f2;
+  --ink: #101826;
+  --ink-soft: #3c4759;
+  --muted: #6b7686;
+  --line: #d4dad6;
+  --accent: #0e7c86;
+  --accent-soft: #dcefef;
+  --font-body: 'Public Sans', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 }
 
-/* ── Reset & Base ── */
+/* ── Reset & base ── */
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
   font-family: var(--font-body);
-  max-width: 900px;
-  margin: auto;
-  padding: 30px;
-  background-color: var(--bg);
-  color: var(--slate-dark);
-  line-height: 1.7;
+  line-height: 1.65;
+  font-size: 16px;
 }
 
 a {
-  color: var(--blue);
+  color: var(--accent);
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
-a:hover { text-decoration: underline; }
+a:hover { border-bottom-color: var(--accent); }
 
 code {
   font-family: var(--font-mono);
   font-size: 0.85em;
-  background: var(--blue-light);
-  color: var(--blue);
+  background: var(--accent-soft);
+  color: var(--accent);
   padding: 1px 5px;
-  border-radius: 4px;
+  border-radius: 3px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+p { margin: 0 0 16px; max-width: 62ch; color: var(--ink-soft); }
+
+/* ── Pipeline shell ── */
+.pipe {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 32px 40px 56px;
+  position: relative;
+}
+
+/* the vertical flow line connecting every stage */
+.pipe::before {
+  content: '';
+  position: absolute;
+  top: 90px;
+  bottom: 90px;
+  left: 20px;
+  width: 2px;
+  background: var(--line);
+}
+
+.stage {
+  position: relative;
+  padding: 0 0 56px 32px;
+}
+
+/* node marking each stage on the flow line */
+.stage::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--accent);
+}
+
+.stage-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
 }
 
 /* ── Header ── */
-header {
-  text-align: center;
-  margin-bottom: 50px;
-  padding: 48px 24px 40px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-  position: relative;
-  overflow: hidden;
+header.stage h1 {
+  font-size: 2.1rem;
+  margin: 0 0 6px;
 }
-
-header::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--blue), #60a5fa);
-}
-
-.header-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--slate-light);
-  margin-bottom: 12px;
-}
-
-h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px;
-  color: var(--slate-dark);
-}
-
-.tagline {
-  font-size: 1rem;
-  color: var(--slate-mid);
+header.stage .role {
+  color: var(--muted);
   margin: 0 0 24px;
+  max-width: 50ch;
 }
+header.stage::before { top: 6px; }
 
 nav {
-  margin-top: 4px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 nav a {
-  margin: 0 12px;
   font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--blue);
-  letter-spacing: 0.01em;
+  font-size: 0.92rem;
+  color: var(--ink);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 2px;
 }
-nav a:hover { text-decoration: underline; }
+nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
-/* ── Section Headings ── */
+/* ── Section headings ── */
 h2 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--blue);
-  margin-top: 50px;
-  margin-bottom: 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--blue-mid);
-  letter-spacing: -0.01em;
+  font-size: 1.4rem;
+  margin: 0 0 18px;
 }
 
-h3 {
-  margin: 8px 0 10px;
-  font-size: 1.1rem;
-  font-weight: 700;
+.section-intro {
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
-h4 {
+/* ── Skills ── */
+.skill-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.skill-row h3 {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--slate-light);
-  margin: 0 0 10px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin: 0 0 8px;
 }
 
-/* ── Skills Grid ── */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-  margin-top: 4px;
-}
-
-.skill-group {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-}
-
-.skill-group ul {
+.tags {
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skill-group li {
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-  color: var(--slate-dark);
-}
-
-.skill-group li::before {
-  content: '→ ';
-  color: var(--blue);
-  font-family: var(--font-mono);
-  font-size: 0.8em;
-}
-
-/* ── Project Cards ── */
-.project-card {
-  background-color: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px 24px;
-  margin-top: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.project-card:hover {
-  box-shadow: 0 6px 20px rgba(37,99,235,0.1);
-  transform: translateY(-2px);
-}
-
-.project-card.featured {
-  border: 2px solid var(--blue);
-  background-color: var(--blue-light);
-}
-
-.project-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 8px;
-  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
 }
-
-.badge {
+.tags li {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background: var(--blue);
-  color: var(--white);
-  padding: 2px 8px;
+  font-size: 0.82rem;
+  background: var(--white, #fff);
+  border: 1px solid var(--line);
+  padding: 5px 10px;
   border-radius: 4px;
+  color: var(--ink-soft);
+}
+.tags.small li {
+  font-size: 0.74rem;
+  padding: 3px 8px;
 }
 
-.tech-tag {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  background: var(--white);
-  color: var(--slate-mid);
-  border: 1px solid var(--border);
-  padding: 2px 8px;
-  border-radius: 4px;
+/* ── Projects ── */
+.project {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line);
 }
-
-.project-card p {
-  font-size: 0.95rem;
-  color: var(--slate-mid);
-  margin: 0 0 14px;
+.project:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
-
-.project-card a {
-  font-size: 0.9rem;
+.project-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.project-head h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+.project a {
   font-weight: 600;
+  font-size: 0.92rem;
 }
 
 /* ── Contact ── */
-.contact-links {
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.contact-grid a {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 14px 16px;
 }
-
-.contact-links a {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 14px 20px;
-  transition: border-color 0.2s;
-  text-decoration: none;
+.contact-grid a:hover {
+  border-color: var(--accent);
 }
-
-.contact-links a:hover {
-  border-color: var(--blue);
-}
-
 .contact-label {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--slate-light);
-  min-width: 70px;
+  font-size: 0.72rem;
+  color: var(--muted);
 }
-
 .contact-value {
-  font-size: 0.95rem;
-  color: var(--blue);
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 /* ── Footer ── */
 footer {
-  margin-top: 50px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--slate-light);
-  font-family: var(--font-mono);
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
+  padding: 24px 0 0 32px;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
-  body { padding: 16px; }
-  h1 { font-size: 1.8rem; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .pipe { padding: 40px 20px 32px 40px; }
+  .pipe::before { left: 12px; }
+  .stage { padding-left: 22px; }
+  .stage::before { left: -6px; }
+  header.stage h1 { font-size: 1.7rem; }
 }
